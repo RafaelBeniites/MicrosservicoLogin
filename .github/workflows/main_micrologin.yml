@@ -65,4 +65,5 @@ jobs:
         with:
           app-name: 'MicroLogin'
           slot-name: 'Production'
-          package: './Back'
+          package: '.'
+
