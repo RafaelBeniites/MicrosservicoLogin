@@ -1,0 +1,198 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003221;
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+  
+  /* Container geral */
+  .container {
+    text-align: center;
+    width: 100%;
+    max-width: 1024px;
+    padding: 1rem;
+  }
+  
+  /* Texto superior */
+  .slogan {
+    font-family: 'Quantico', sans-serif;
+    font-size: 1.3rem;
+    color: #64997F;
+    margin-bottom: 5rem;
+  }
+  
+  /* Card */
+  .card {
+    position: relative;
+    background: #B7D2BD;
+    border-radius: 20px;
+    padding: 4rem 1rem 1rem; /* espaço maior embaixo para imagens */
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 50px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Avatar */
+  .avatar {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #64997F url("avatar.svg") no-repeat center;
+    background-size: 60%;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  }
+  
+  /* Título */
+  .title {
+    margin-top: 30px;
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 2rem;
+    color: #213b37;
+  }
+  
+  /* Inputs */
+  .input {
+    width: 80%;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #032213;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+  }
+
+  /* Estilo do placeholder */
+.input::placeholder {
+    color: #64997F;       /* cor do placeholder */
+    font-family: 'Pixelify Sans', sans-serif; /* fonte do placeholder em pixel/monospace */
+    font-size: 1.2rem;      /* tamanho da fonte do placeholder */
+    text-align: center;   /* centraliza o texto do placeholder */
+  }
+  
+  /* Botão */
+  .btn {
+    margin-top: 1rem;
+    width: 120px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(234,178,56,0.8);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  
+  /* Link cadastrar */
+  .register {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #003221;
+    text-decoration: none;
+  }
+  
+  /* Bloco decorativo */
+  .decor {
+    position: absolute;
+    bottom: -30px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* Foguete */
+  .foguete {
+    position: absolute;
+    width: 220px;
+    bottom: -100px;
+    right: 30px;
+    transform: rotate(-18deg);
+  }
+  
+  /* Esquilo */
+  .esquilo {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    right: -60px;
+    transform: translateY(50px); /* desce 50px abaixo */
+    }
+  
+  /* Logo */
+  .logo {
+    position: absolute;
+    width: 1000px;
+    bottom: -530px;
+    right: -500px;
+    transform: rotate(-20deg);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .card {
+      max-width: 90%;
+      padding: 3rem 1rem 5rem;
+    }
+  
+    .decor {
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+    }
+  
+    .foguete {
+      width: 70px;
+      bottom: 40px;
+    }
+  
+    .esquilo {
+      width: 100px;
+    }
+  
+    .logo {
+      width: 140px;
+      bottom: -5px;
+      right: -20px;
+    }
+  }
+
+.foguete, .esquilo, .logo {
+  pointer-events: none; /* impede que bloqueiem os cliques/digitação :) */
+}
+
+/* Espaço reservado para mensagens flash */
+.flash-message {
+  min-height: 30px; /* mantém o espaço mesmo sem mensagem */
+  margin: 10px 0;
+  font-size: 1rem;
+  font-family: 'Quantico', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo de erro */
+.flash-message.error {
+  color: #d62828;
+}
+
+/* Estilo de sucesso (caso use depois) */
+.flash-message.success {
+  color: #2a9d8f;
+}
