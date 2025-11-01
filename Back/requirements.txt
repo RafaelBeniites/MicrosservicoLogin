@@ -1,8 +1,5 @@
 fastapi
 uvicorn
-sqlmodel
-pydantic-settings
-python-jose
-passlib[bcrypt]
-httpx
-
+gunicorn
+jinja2
+python-multipart
