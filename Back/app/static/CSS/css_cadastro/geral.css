@@ -1,0 +1,55 @@
+/* =======================
+   RESET BÁSICO
+   ======================= */
+
+/* Remove margens e preenchimentos padrão de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura do elemento */
+}
+
+/* Estiliza os elementos principais da página (body e html) */
+body, html {
+  width: 100%;                /* Usa toda a largura da tela */
+  height: 100%;               /* Usa toda a altura da tela */
+  font-family: 'Quantico', sans-serif;  /* Define a fonte principal */
+  background-color: #003221;  /* Cor de fundo da página (verde escuro) */
+  display: flex;              /* Usa flexbox para centralizar o conteúdo */
+  justify-content: center;   /* Centraliza horizontalmente */
+  align-items: center;       /* Centraliza verticalmente */
+}
+
+/* =======================
+   CONTÊINER PRINCIPAL
+   ======================= */
+
+/* Define a "tela" principal onde tudo será desenhado */
+.tela {
+  position: relative;       /* Permite posicionar elementos filhos com absolute */
+  width: 1024px;            /* Largura fixa da tela */
+  height: 768px;            /* Altura fixa da tela */
+  background-color: #003221; /* Cor de fundo (reforçada caso o body falhe) */
+}
+
+
+/* =======================
+   CONTEÚDO CENTRAL
+   ======================= */
+
+/* Container que agrupa os dois painéis (esquerdo e direito) */
+.conteudo {
+  position: absolute;
+  top: 50%;                     /* Posiciona verticalmente no meio da tela */
+  left: 50%;                    /* Posiciona horizontalmente no meio da tela */
+  transform: translate(-50%, -50%); /* Ajusta para centralizar exatamente */
+
+  width: 1500px;                /* Aumentado */
+  height: 750px;                /* Aumentado */
+
+  background: #64997F;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0px 4px 50px 70px rgba(0, 0, 0, 0.25);
+}
+
