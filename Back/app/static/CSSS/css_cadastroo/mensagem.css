@@ -1,0 +1,96 @@
+
+/*
+ * ====================================================================
+ * ===== BOTÕES: Apenas o botão Criar, centralizado. =====
+ * ====================================================================
+ */
+
+/* Container para centralizar o botão horizontalmente no formulário */
+.botoes {
+    /* Flex com !important para garantir centralização */
+    display: flex !important; 
+    justify-content: center !important; /* Centraliza o botão */
+    align-items: center !important;
+    margin-top: 35px !important; 
+    
+    /* Regras para evitar posicionamento quebrado */
+    position: static !important; 
+    left: auto !important;
+    transform: none !important;
+    z-index: 10;
+}
+
+/* Estilo do botão Criar (Único botão no formulário) */
+.botao-criar {
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    font-family: "Quantico", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.08s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border: 2px solid #003221;
+    
+    /* Estilo escuro (submit) */
+    background: #003221;
+    color: #ffffff;
+    border-color: #003221;
+    
+    /* Garante a visibilidade */
+    display: block !important; 
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* efeito hover */
+.botao-criar:hover {
+    background: #004d30;
+}
+
+
+/*
+ * ====================================================================
+ * ===== MENSAGEM DE FEEDBACK (Mantenha este código) =====
+ * ====================================================================
+ */
+.mensagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 40px;
+    border-radius: 20px;
+    color: #fff;
+    font-family: "Quantico", sans-serif;
+    font-size: 22px;
+    text-align: center;
+    z-index: 9999;
+    animation: fadeIn 0.4s ease;
+}
+
+.mensagem.sucesso {
+    background-color: #1b7c4b;
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+}
+
+.mensagem.erro {
+    background-color: #b3261e;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
